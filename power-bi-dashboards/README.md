@@ -33,7 +33,7 @@ Cinco dashboards que fiz acompanhando as aulas do canal Hashtag Treinamentos, no
 
 [Aula no YouTube](https://www.youtube.com/watch?v=NW1t0JN8068&list=PLccwYcBNyMAk1LsQ6opdZZW237qxusJw5&index=1)
 
-## 5. Atendimento ao cliente
+## 5. Atendimento ao cliente (SAC)
 
 ![Dashboard 5 - Atendimento](dashboard_5_atendimento.png)
 
