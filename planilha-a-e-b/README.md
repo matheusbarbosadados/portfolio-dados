@@ -6,7 +6,7 @@ Exemplo: a planilha B tem 45 vendas e a A tem 30. O script traz as 15 que faltam
 
 ARQUIVOS
 
-planilha_a_b.py - script principal
+planilha_A_e_B.py - script principal
 Vendas de Informática 30.xlsx - planilha menor (A), que será completada
 Vendas de Informática 45.xlsx - planilha maior e mais atualizada (B)
 planilha_a_atualizada.xlsx - resultado, criado pelo script
@@ -15,7 +15,7 @@ COMO USAR
 
 1. Instale a biblioteca: pip install openpyxl
 2. Coloque as duas planilhas na mesma pasta do script.
-3. Execute: python planilha_a_b.py
+3. Execute: python planilha_A_e_B.py
 4. Abra planilha_a_atualizada.xlsx.
 
 COMO FUNCIONA
