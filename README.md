@@ -1,3 +1,5 @@
+A tabela atual é assim:
+
 # Portfólio de Dados
 
 Olá! Sou o Matheus. Estudo Python, SQL e Power BI desde abril de 2026 e pratico Excel toda semana. Procuro uma oportunidade na área de dados.
