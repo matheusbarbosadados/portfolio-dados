@@ -2,15 +2,39 @@
 
 
 import io
-import fitz  # PyMuPDF
+from pathlib import Path
+from tkinter import Tk, filedialog
+
+import pymupdf as fitz  # PyMuPDF
 import pytesseract
 from PIL import Image
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-# Altere para o caminho do seu PDF e do arquivo de saída
-PDF = r"entrada.pdf"
-SAIDA = r"pdf_pesquisavel.pdf"
+def escolher_arquivos():
+    janela = Tk()
+    janela.withdraw()
+    janela.attributes("-topmost", True)
+    pdf = filedialog.askopenfilename(
+        title="Escolha o PDF",
+        filetypes=[("PDF", "*.pdf")],
+    )
+    if not pdf:
+        janela.destroy()
+        raise SystemExit("Nenhum PDF escolhido.")
+    saida = filedialog.asksaveasfilename(
+        title="Salvar o PDF pesquisável como",
+        defaultextension=".pdf",
+        initialfile=Path(pdf).stem + "_pesquisavel.pdf",
+        filetypes=[("PDF", "*.pdf")],
+    )
+    janela.destroy()
+    if not saida:
+        raise SystemExit("Nenhum local escolhido.")
+    return pdf, saida
+
+
+PDF, SAIDA = escolher_arquivos()
 
 doc = fitz.open(PDF)
 novo = fitz.open()
