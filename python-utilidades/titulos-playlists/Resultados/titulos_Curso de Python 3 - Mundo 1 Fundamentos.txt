@@ -1,0 +1,48 @@
+01 - Curso Python #01 - Seja um Programador
+02 - Curso Python #02 - Para que serve o Python?
+03 - Curso Python #03 - Instalando o Python3 e o IDLE
+04 - Curso Python #04 - Primeiros comandos em Python3
+05 - Seja APOIADOR e receba RECOMPENSAS
+06 - Curso Python #05 - Instalando o PyCharm e o QPython3
+07 - PyCharm mudou! Saiba como treinar Python no PC, celular e tablet
+08 - Exercício Python #001 - Deixando tudo pronto
+09 - Exercício Python #002 - Respondendo ao Usuário
+10 - Curso Python #06 - Tipos Primitivos e Saída de Dados
+11 - Exercício Python #003 - Somando dois números
+12 - Exercício Python #004 - Dissecando uma Variável
+13 - Curso Python #07 - Operadores Aritméticos
+14 - Exercício Python #005 - Antecessor e Sucessor
+15 - Exercício Python #006 - Dobro, Triplo, Raiz Quadrada
+16 - Exercício Python #007 - Média Aritmética
+17 - Exercício Python #008 - Conversor de Medidas
+18 - Exercício Python #009 - Tabuada
+19 - Exercício Python #010 - Conversor de Moedas
+20 - Exercício Python #011 - Pintando Parede
+21 - Exercício Python #012 - Calculando Descontos
+22 - Exercício Python #013 - Reajuste Salarial
+23 - Exercício Python #014 - Conversor de Temperaturas
+24 - Exercício Python #015 - Aluguel de Carros
+25 - Curso Python #08 - Utilizando Módulos
+26 - Exercício Python #016 - Quebrando um número
+27 - Exercício Python #017 - Catetos e Hipotenusa
+28 - Exercício Python #018 - Seno, Cosseno e Tangente
+29 - Exercício Python #019 - Sorteando um item na lista
+30 - Exercício Python #020 - Sorteando uma ordem na lista
+31 - Exercício Python #021 - Tocando um MP3
+32 - Curso Python #09 - Manipulando Texto
+33 - Exercício Python #022 - Analisador de Textos
+34 - Exercício Python #023 - Separando dígitos de um número
+35 - Exercício Python #024 - Verificando as primeiras letras de um texto
+36 - Exercício Python #025 - Procurando uma string dentro de outra
+37 - Exercício Python #026 - Primeira e última ocorrência de uma string
+38 - Exercício Python #027 - Primeiro e último nome de uma pessoa
+39 - Curso Python #10 - Condições (Parte 1)
+40 - Exercício Python #028 - Jogo da Adivinhação v.1.0
+41 - Exercício Python #029 - Radar eletrônico
+42 - Exercício Python #030 - Par ou Ímpar?
+43 - Exercício Python #031 - Custo da Viagem
+44 - Exercício Python #032 - Ano Bissexto
+45 - Exercício Python #033 - Maior e menor valores
+46 - Exercício Python #034 - Aumentos múltiplos
+47 - Exercício Python #035 - Analisando Triângulo v1.0
+48 - Curso Python #11 - Cores no Terminal

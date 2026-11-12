@@ -1,0 +1,50 @@
+01 - Python Orientado a Objetos: O Guia Definitivo para Iniciantes - Onde está o Mundo 4 de Python?
+02 - Crise do Software: O motivo do surgimento da POO - Curso Python POO: Aula 01
+03 - As 6 VANTAGENS da POO: Programação Orientada a Objetos - Curso Python POO: Aula 02
+04 - POO para Iniciantes: Guia Definitivo - Classes, Objetos, Atributos, etc - Curso Python POO: Aula 03
+05 - PyCharm mudou! Saiba como treinar Python no PC, celular e tablet
+06 - Python Orientado a Objetos: Criando Classes e Objetos na Prática - Curso Python POO: Aula 04
+07 - Melhorando Classes e Criando uma Conta Bancária na Prática - Curso Python POO: Aula 05
+08 - Rich no Python: Cores, Emojis, Tabelas e Debug Muito Mais Bonitos - Curso Python POO: Aula Extra
+09 - Aprenda Programação Orientada a Objetos com Desafios em Python - Curso Python POO: Aula 05
+10 - Classes, Objetos e Atributos - Curso Python POO: Desafio 16
+11 - Sistema de Produtos com Programação Orientada a Objetos - Curso Python POO: Desafio 17
+12 - Criando um Sistema de Análise de Churrasco com Python - Curso Python POO: Desafio 18
+13 - Livro com Validação de Limite de Páginas  - Curso Python POO: Desafio19
+14 - (sem título)
+15 - Criei uma Classe GAMER em Python e organizei os jogos favoritos - Curso Python POO: Desafio 20
+16 - Desenvolvi uma CANETA que escreve colorido em Python - Curso Python POO: Desafio 21
+17 - Controle Remoto em Python - Curso Python POO: Desafio 22
+18 - Herança em Python explicada como nunca fizeram - Curso Python POO: Aula 7
+19 - Abstração um  dos Pilares Centrais da Programação Orientada a Objetos- Curso Python POO: Aula 8
+20 - Desafios de Herança, Abstração e Classes - Curso Python POO: Aula 9
+21 - Esse exercício de polígonos vai quebrar sua lógica (ou evoluir) - Curso Python POO: Desafio 23
+22 - Programei uma MÁQUINA DE CAFÉ  - Curso Python POO: Desafio24
+23 - Programei um sistema de FRETE com POO  - Curso Python POO: Desafio 25
+24 - Criei um sistema que calcula salário automaticamente -  Curso Python POO: Desafio 26
+25 - Criei um SISTEMA DE BATALHA RPG em Python - Curso Python POO: Desafio 27
+26 - Encapsulamento: público, protegido e privado (Parte 1) -  Curso Python POO: Aula 10
+27 - Encapsulamento: Getters, Setters e @Property (Parte2) -  Curso Python POO: Aula 11
+28 - DOMINE Encapsulamento em Python com Getters, Setters e 6 Projetos Reais -  Curso Python POO: Aula 12
+29 - Termostato Inteligente com Encapsulamento e Try/Except -  Curso Python POO: Desafio 28
+30 - Crie um Diário Secreto com Encapsulamento e Senha  - Curso Python POO: Desafio 29
+31 - Criptografia de Senhas com SHA-256, Hashlib e Encapsulamento - Curso Python POO: Desafio 30
+32 - Como Proteger uma Conta Bancária com Hash SHA-256- Curso Python POO: Desafio 32
+33 - Criando uma Classe Retângulo com Encapsulamento - Curso Python POO: Desafio 31
+34 - Classes Aluno e Professor Utilizando Herança - Curso Python POO: Desafio 33
+35 - Polimorfismo em Python: Override, Overload e Duck Typing Explicados- Curso Python POO: Aula 13
+36 - Operator Overloading em Python: Personalizando Operadores na Prática - Curso Python POO: Aula 14
+37 - 7 Desafios de Polimorfismo em Python | POO na Prática - Curso Python POO: Aula 15
+38 - Criando Funcionários com Herança e Polimorfismo - Curso Python POO: Desafio 34
+39 - Simulando Arquivos PDF e DOC com Polimorfismo - Curso Python POO: Desafio 35
+40 - Criando um Sistema de Pagamentos com Polimorfismo - Curso Python POO: Desafio 36
+41 - Criando Mensagens, Alertas e Erros com Polimorfismo - Curso Python POO: Desafio 37
+42 - Aprenda REGEX em Python Criando um Validador de Dados  - Curso Python POO: Desafio 39
+43 - Criando um Exportador de Dados com Polimorfismo - Curso Python POO: Desafio 40
+44 - Criando um Carrinho de Compras com Agregação - Curso Python POO: Desafio 38
+45 - (sem título)
+46 - Banco de Dados com Python: Aprenda SQL do Zero  - Curso Python POO: Aula 16
+47 - Banco de Dados com Python: SQLite, Consultas e SQL Injection - Curso Python POO: Aula 17
+48 - Tratamento de Datas e Cálculo de Idade com SQLite  - Curso Python POO: Desafio 41
+49 - O Que é CRUD? Aprenda a Criar um Sistema com Python - Curso Python POO: Aula 18
+50 - Aprenda o C de Create: Criando um Cadastro de Pessoas - Curso Python POO: Aula 19

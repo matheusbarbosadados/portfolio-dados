@@ -1,0 +1,42 @@
+01 - Mundo 02 - Curso de Python - Dicas e Regras
+02 - PyCharm mudou! Saiba como treinar Python no PC, celular e tablet
+03 - Curso Python #012 - Condições Aninhadas
+04 - Exercício Python #036 - Aprovando Empréstimo
+05 - Exercício Python #037 - Conversor de Bases Numéricas
+06 - Exercício Python #038 - Comparando números
+07 - Exercício Python #039 - Alistamento Militar
+08 - Exercício Python #040 - Aquele clássico da Média
+09 - Python Exercício #041 - Classificando Atletas
+10 - Exercício Python #042 - Analisando Triângulos v2.0
+11 - Exercício Python #043 - Índice de Massa Corporal
+12 - Exercício Python #044 - Gerenciador de Pagamentos
+13 - Exercício Python #045 - GAME: Pedra Papel e Tesoura
+14 - Curso Python #013 - Estrutura de repetição for
+15 - Exercício Python #046 - Contagem regressiva
+16 - Exercício Python #047 - Contagem de pares
+17 - Exercício Python #048 - Soma ímpares múltiplos de três
+18 - Exercício Python #049 - Tabuada v.2.0
+19 - Exercício Python #050 - Soma dos pares
+20 - Exercício Python #051 - Progressão Aritmética
+21 - Exercício Python #052 - Números primos
+22 - Exercício Python #053 - Detector de Palíndromo
+23 - Exercício Python #054 - Grupo da Maioridade
+24 - Exercício Python #055 - Maior e menor da sequência
+25 - Exercício Python #056 - Analisador completo
+26 - Curso Python #014 - Estrutura de repetição while
+27 - Exercício Python #057 - Validação de Dados
+28 - Exercício Python #058 - Jogo da Adivinhação v2.0
+29 - Exercício Python #059 - Criando um Menu de Opções
+30 - Exercício Python #060 - Cálculo do Fatorial
+31 - Exercício Python #061 - Progressão Aritmética v2.0
+32 - Exercício Python #062 - Super Progressão Aritmética v3.0
+33 - Exercício Python #063 - Sequência de Fibonacci v1.0
+34 - Exercício Python #064 - Tratando vários valores v1.0
+35 - Exercício Python #065 - Maior e Menor valores
+36 - Curso Python #15 - Interrompendo repetições while
+37 - Exercício Python #066 - Vários números com flag
+38 - Exercício Python #067 - Tabuada v3.0
+39 - Exercício Python #068 - Jogo do Par ou Ímpar
+40 - Exercício Python #069 - Análise de dados do grupo
+41 - Exercício Python #070 - Estatísticas em produtos
+42 - Exercício Python #071 - Simulador de Caixa Eletrônico
