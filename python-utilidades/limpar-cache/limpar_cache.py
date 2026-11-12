@@ -57,7 +57,7 @@ def programas_abertos():
 
 def fazer_backup():
     destino = os.path.join(os.environ["USERPROFILE"], "OneDrive", "Backup_C")
-    pastas = [r"C:\Projetos"]  # Altere para as pastas que você quer copiar
+    pastas = [r"C:\1. Python", r"C:\2. MySQL VsCode", r"C:\3. Python Matheus", r"C:\5. Arquivos"]
     print("Fazendo backup para o OneDrive...\n")
     for pasta in pastas:
         if not os.path.isdir(pasta):
