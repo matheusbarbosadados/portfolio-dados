@@ -1,9 +1,31 @@
 from openpyxl import load_workbook
 from copy import copy
+from pathlib import Path
+from tkinter import Tk, filedialog
 
 # 1. Abrir as duas planilhas
-wb_a = load_workbook("Vendas de Informática 30.xlsx")
-wb_b = load_workbook("Vendas de Informática 45.xlsx")
+janela = Tk()
+janela.withdraw()
+janela.attributes("-topmost", True)
+
+arquivo_a = filedialog.askopenfilename(
+    title="Escolha a planilha A (a que recebe as vendas)",
+    filetypes=[("Excel", "*.xlsx")],
+)
+if not arquivo_a:
+    raise SystemExit("Nenhuma planilha A escolhida.")
+
+arquivo_b = filedialog.askopenfilename(
+    title="Escolha a planilha B (de onde vêm as vendas novas)",
+    filetypes=[("Excel", "*.xlsx")],
+)
+if not arquivo_b:
+    raise SystemExit("Nenhuma planilha B escolhida.")
+
+janela.destroy()
+
+wb_a = load_workbook(arquivo_a)
+wb_b = load_workbook(arquivo_b)
 ws_a = wb_a.active
 ws_b = wb_b.active
 
@@ -25,5 +47,5 @@ for linha in ws_b.iter_rows(min_row=2):
         adicionadas += 1
 
 # 4. Salvar em um arquivo novo
-wb_a.save("planilha_a_atualizada.xlsx")
+wb_a.save(Path(arquivo_a).parent / "planilha_a_atualizada.xlsx")
 print(f"{adicionadas} vendas adicionadas")
