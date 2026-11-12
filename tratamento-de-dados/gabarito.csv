@@ -1,0 +1,87 @@
+linha,coluna,valor_errado,tipo_do_erro,valor_correto
+2,comissao_bruta,7455.22,Erro 6: Comissão > Valor,256.03
+7,custo,-239.46,Erro 2: Tipagem e formato numérico,239.46
+7,nome_cliente,Camila Rocha,"Erro 3: Case, espaço, acento ou typo",Camila Rocha
+10,nome_cliente,Ana Clara,"Erro 3: Case, espaço, acento ou typo",Ana Clara
+10,produto,renda fixa,Erro 4: Variação de categoria,Renda Fixa
+13,filial,SP-FariaLima,Erro 4: Variação de categoria,SP-Faria Lima
+16,valor,4892124.0,Erro 6: Valor anômalo,48921.24
+16,dt_ref,5/2/26,Erro 1: Formato/Data inválida,2026-02-05
+17,parceiro,btg,Erro 4: Variação de categoria,BTG
+18,dt_ref,23-jun-2026,Erro 1: Formato/Data inválida,2026-06-23
+19,dt_ref,6/2/26,Erro 1: Formato/Data inválida,2026-02-06
+19,custo,"R$ 162,88",Erro 2: Tipagem e formato numérico,162.88
+20,status,PENDENTE,Erro 4: Variação de categoria,Pendente
+20,valor,"5,749.61",Erro 2: Tipagem e formato numérico,5749.61
+22,dt_ref,26/01/2026,Erro 1: Formato/Data inválida,2026-01-26
+32,comissao_bruta,38320.31,Erro 6: Comissão > Valor,1196.76
+34,nome_cliente,Beatriz Ferreira,"Erro 3: Case, espaço, acento ou typo",Beatriz Ferreira
+34,valor,4432260.0,Erro 6: Valor anômalo,44322.6
+36,dt_ref,29-ago-2026,Erro 1: Formato/Data inválida,2026-08-29
+47,dt_ref,31/02/2026,Erro 1: Formato/Data inválida,2026-03-23
+47,comissao_bruta,38439.12,Erro 6: Comissão > Valor,1085.25
+48,valor,1249019.0,Erro 6: Valor anômalo,12490.19
+57,status,PENDENTE,Erro 4: Variação de categoria,Pendente
+59,parceiro,Itaú,Erro 4: Variação de categoria,Itaú
+59,valor,3695597.0,Erro 6: Valor anômalo,36955.97
+67,produto,ações,Erro 4: Variação de categoria,Ações
+75,nome_cliente,Ana Clara,"Erro 3: Case, espaço, acento ou typo",Ana Clara
+75,filial,RJ-Centro,Erro 4: Variação de categoria,RJ-Centro
+78,dt_ref,11.06.2026,Erro 1: Formato/Data inválida,2026-06-11
+80,dt_ref,24/12/26,Erro 1: Formato/Data inválida,2026-12-24
+90,dt_ref,16-jun-2026,Erro 1: Formato/Data inválida,2026-06-16
+90,filial,PR-Batel,Erro 4: Variação de categoria,PR-Batel
+91,dt_ref,,Erro 1: Formato/Data inválida,2026-02-10
+91,status,EM ANÁLISE,Erro 4: Variação de categoria,Em Análise
+97,custo,2082.59,Erro 6: Custo > Comissão,325.55
+97,custo,N/A,Erro 2: Tipagem e formato numérico,2082.59
+98,comissao_bruta,49181.77,Erro 6: Comissão > Valor,753.09
+99,nome_cliente,Ana Clara,"Erro 3: Case, espaço, acento ou typo",Ana Clara
+99,status,EM ANÁLISE,Erro 4: Variação de categoria,Em Análise
+102,dt_ref,09/07/2026,Erro 1: Formato/Data inválida,2026-07-09
+103,nome_cliente,   Beatriz Ferreira  ,"Erro 3: Case, espaço, acento ou typo",Beatriz Ferreira
+106,nome_cliente,Antonio Carlos,"Erro 3: Case, espaço, acento ou typo",Antônio Carlos
+106,comissao_bruta, 1341.51 ,Erro 2: Tipagem e formato numérico,1341.51
+109,nome_cliente,   Rafael Gomes  ,"Erro 3: Case, espaço, acento ou typo",Rafael Gomes
+109,comissao_bruta,"365,76",Erro 2: Tipagem e formato numérico,365.76
+110,status,EM ANÁLISE,Erro 4: Variação de categoria,Em Análise
+110,comissao_bruta,"267,42",Erro 2: Tipagem e formato numérico,267.42
+116,custo,-106.46,Erro 2: Tipagem e formato numérico,106.46
+116,custo,1328.2,Erro 6: Custo > Comissão,-106.46
+118,comissao_bruta,664.63,Erro 2: Tipagem e formato numérico,664.63
+118,valor,4861871.0,Erro 6: Valor anômalo,48618.71
+120,filial,RJ-CENTRO,Erro 4: Variação de categoria,RJ-Centro
+122,comissao_bruta,"1.925,67",Erro 2: Tipagem e formato numérico,1925.67
+137,valor,-9832.88,Erro 2: Tipagem e formato numérico,9832.88
+139,valor,895011.0,Erro 6: Valor anômalo,8950.11
+139,nome_cliente,Antôniu Carlos,"Erro 3: Case, espaço, acento ou typo",Antônio Carlos
+140,valor,3091918.0,Erro 6: Valor anômalo,30919.18
+140,dt_ref,16/8/26,Erro 1: Formato/Data inválida,2026-08-16
+141,nome_cliente,RAFAEL GOMES,"Erro 3: Case, espaço, acento ou typo",Rafael Gomes
+141,dt_ref,14-dez-2026,Erro 1: Formato/Data inválida,2026-12-14
+145,dt_ref,31/02/2026,Erro 1: Formato/Data inválida,2026-03-12
+146,valor,,Erro 2: Tipagem e formato numérico,11567.08
+146,dt_ref,,Erro 1: Formato/Data inválida,2026-05-12
+150,status,em análise,Erro 4: Variação de categoria,Em Análise
+150,nome_cliente,   Antônio Carlos  ,"Erro 3: Case, espaço, acento ou typo",Antônio Carlos
+160,valor,677029.0,Erro 6: Valor anômalo,6770.29
+165,custo, 368.29 ,Erro 2: Tipagem e formato numérico,368.29
+173,valor,N/A,Erro 2: Tipagem e formato numérico,46753.83
+174,status,EM ANÁLISE,Erro 4: Variação de categoria,Em Análise
+176,comissao_bruta,"R$ 492,64",Erro 2: Tipagem e formato numérico,492.64
+181,dt_ref,26/10/2026,Erro 1: Formato/Data inválida,2026-10-26
+181,custo,1738.71,Erro 6: Custo > Comissão,331.56
+184,filial,PR-Batel,Erro 4: Variação de categoria,PR-Batel
+184,valor,1692743.0,Erro 6: Valor anômalo,16927.43
+187,nome_cliente,camila rocha,"Erro 3: Case, espaço, acento ou typo",Camila Rocha
+187,dt_ref,,Erro 1: Formato/Data inválida,2026-05-28
+192,todas,Linha idêntica à linha 12,Erro 5: Duplicada exata,Remover linha
+193,todas,Linha idêntica à linha 13,Erro 5: Duplicada exata,Remover linha
+194,todas,Linha idêntica à linha 14,Erro 5: Duplicada exata,Remover linha
+195,todas,Linha idêntica à linha 15,Erro 5: Duplicada exata,Remover linha
+196,todas,Linha idêntica à linha 16,Erro 5: Duplicada exata,Remover linha
+197,nome_cliente,CARLOS SANTOS ,Erro 5: Quase duplicada,Carlos Santos
+198,nome_cliente,MARIA SOUZA ,Erro 5: Quase duplicada,Maria Souza
+199,nome_cliente,ANTÔNIO CARLOS ,Erro 5: Quase duplicada,Antônio Carlos
+200,nome_cliente,JOÃO PEREIRA ,Erro 5: Quase duplicada,João Pereira
+201,nome_cliente,LUCAS MENDES ,Erro 5: Quase duplicada,Lucas Mendes
