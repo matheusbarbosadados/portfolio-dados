@@ -11,6 +11,7 @@ Sou iniciante. Este repositório mostra o meu aprendizado de forma honesta, com 
 | [PDF para Excel](pdf-para-excel) | Script em Python que lê um PDF e salva as tabelas e o texto em uma planilha Excel |
 | [Planilha A e B](planilha-a-e-b) | Script em Python que compara duas planilhas e copia para a menor as linhas que faltam |
 | [Tratamento de Dados](tratamento-de-dados) | Script em Python que limpa planilhas CSV e Excel: datas, números, nomes, categorias e linhas repetidas |
+| [Títulos de Playlists](python-utilidades/titulos-playlists) | Script que lê os títulos de uma playlist do YouTube e salva em um arquivo de texto, como índice de estudo |
 
 ## Python - Utilidades
 
@@ -19,7 +20,7 @@ Sou iniciante. Este repositório mostra o meu aprendizado de forma honesta, com 
 | [PDF OCR](python-utilidades/pdf-ocr) | Script que lê PDFs escaneados e reconhece o texto |
 | [Limpar Cache](python-utilidades/limpar-cache) | Script que limpa arquivos temporários do computador |
 | [Pastas Vazias e Duplicados](python-utilidades/pastas-vazias-e-duplicados) | Script que encontra pastas vazias e arquivos duplicados |
-| [Organizador Universal](python-utilidades/organizador-universal) | Script que organiza os arquivos de uma pasta |
+| [Organizador Universal](python-utilidades/organizador-universal) | Script que organiza os arquivos de uma pasta de acordo com a extensão de cada um |
 
 ## Estudos
 
