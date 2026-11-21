@@ -50,6 +50,10 @@ O fluxo de trabalho reuniu boas práticas de engenharia de dados com o suporte a
 
 3. **Construção do Dashboard (`3_gerar_dashboard.py`):**
    * Script Python responsável por ler os dados tratados, consolidar métricas de KPI e estruturar dinamicamente os gráficos interativos do Plotly em uma interface HTML com alternância de tema gráfico em tempo real (Light/Dark).
+---
+
+[![Preview do Dashboard Interativo](./dashboard.png)](https://matheusbarbosadados.github.io/portfolio-dados/1_mega_projetos/datasus_mortalidade/index.html)
+> 💡 *Clique na imagem acima para abrir a versão interativa do dashboard com filtros e gráficos dinâmicos.*
 
 ---
 
