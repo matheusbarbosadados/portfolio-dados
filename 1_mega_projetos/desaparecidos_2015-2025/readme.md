@@ -11,7 +11,7 @@ Projeto de Análise de Dados e visualização interativa dos registros de pessoa
 
 ## 📸 Visual do Painel
 
-![Painel de Pessoas Desaparecidas](./imagens/painel.png)
+![Painel de Pessoas Desaparecidas](./painel.png)
 
 ---
 
