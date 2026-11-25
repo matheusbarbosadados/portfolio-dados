@@ -43,3 +43,11 @@ Os dados foram obtidos no portal oficial de dados abertos do governo do Estado d
 ├── resumo_isp_10anos.txt       # Arquivo compilado com a consolidação dos dados de 10 anos
 ├── Dashboard.png               # Imagem final do painel executivo em alta resolução
 └── README.md                   # Documentação oficial do projeto
+```
+## 🤖 Transparência e Uso de IA Generativa
+
+Este projeto utilizou o **Gemini** na abordagem 4ª Forma (No-Code / Processamento Generativo com IA):
+
+**Extração e Consolidação via Python:** O script analise_isp.py foi usado para ler a base agregada do ISP-RJ, filtrar o recorte de 2015 a 2025 e gerar o resumo estatístico (resumo_isp_10anos.txt) sem travamentos.
+
+**Geração Visual com o Gemini:** Os números consolidados foram processados com apoio do Gemini para estruturar e renderizar a imagem executiva final (Dashboard.png) em estilo escuro (Dark Tech), reunindo KPIs, evolução temporal e detalhamento por modalidade.
