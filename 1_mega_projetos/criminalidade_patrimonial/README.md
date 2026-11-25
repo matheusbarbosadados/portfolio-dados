@@ -18,7 +18,7 @@ Projeto de Análise de Dados e visualização executiva dos registros de furtos,
 ## Visual do Painel (Interativo) - HTML/CSS/JS
 
 - **Versão interativa no navegador (via GitHub Pages):** [Abrir Painel Interativo](https://matheusbarbosadados.github.io/portfolio-dados/1_mega_projetos/criminalidade_patrimonial/index.html)
-- **Arquivo local no repositório:** [./index.html]
+- **Código do arquivo no repositório:** [Ver index.html](https://github.com/matheusbarbosadados/portfolio-dados/blob/main/1_mega_projetos/criminalidade_patrimonial/index.html)
 
 ---
 
