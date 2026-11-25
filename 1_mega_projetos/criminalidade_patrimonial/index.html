@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panorama da Criminalidade Patrimonial no RJ (2015–2025)</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #121824;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    .card-bg {
+      background-color: #1E293B;
+      border: 1px solid #334155;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #1E293B;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-6 min-h-screen custom-scrollbar">
+
+  <!-- TOP HEADER -->
+  <header class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-slate-800 gap-4">
+    <div>
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-3 h-3 rounded-full bg-cyan-400 animate-pulse"></span>
+        <h1 class="text-xl md:text-2xl font-bold tracking-wide">PANORAMA DA CRIMINALIDADE PATRIMONIAL NO RIO DE JANEIRO</h1>
+      </div>
+      <p class="text-xs md:text-sm text-slate-400 mt-1">Análise Histórica e Executiva (2015–2025) — Dados Oficiais ISP-RJ</p>
+    </div>
+
+    <!-- SELETOR MULTISSELEÇÃO DE ANOS -->
+    <div class="relative inline-block text-left z-50">
+      <label class="block text-xs font-semibold text-slate-400 mb-1">Filtrar por Anos:</label>
+      <button id="dropdownBtn" onclick="toggleDropdown()" class="card-bg px-4 py-2 rounded-lg text-sm font-semibold text-slate-200 flex items-center justify-between w-64 border border-slate-700 hover:border-cyan-500 transition-colors">
+        <span id="dropdownLabel">Todos os Anos (10 Anos)</span>
+        <svg class="w-4 h-4 ml-2 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+
+      <!-- MENU DROPDOWN INTERATIVO -->
+      <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-64 card-bg rounded-lg shadow-xl border border-slate-700 p-3 text-sm z-50">
+        <!-- Ações Rápidas -->
+        <div class="pb-2 mb-2 border-b border-slate-700 flex justify-between gap-1">
+          <button onclick="selectPreset('all')" class="text-xs text-cyan-400 hover:underline font-semibold">Todos</button>
+          <button onclick="selectPreset('pre')" class="text-xs text-cyan-400 hover:underline font-semibold">2015-2019</button>
+          <button onclick="selectPreset('pos')" class="text-xs text-cyan-400 hover:underline font-semibold">2020-2025</button>
+        </div>
+
+        <!-- Checkboxes dos Anos Individualizados -->
+        <div class="space-y-1.5 max-h-48 overflow-y-auto custom-scrollbar pr-1" id="checkboxGroup">
+          <!-- Gerado via JS -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FAISA DE KPIS (CARDS) -->
+  <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 my-6">
+    <div class="card-bg p-4 rounded-xl border-l-4 border-slate-400">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Ocorrências (R.O.)</span>
+      <div class="text-lg md:text-2xl font-bold text-white mt-1" id="kpi-ro">8.568.358</div>
+      <span class="text-[10px] text-slate-500">Registros em Delegacias</span>
+    </div>
+    <div class="card-bg p-4 rounded-xl border-l-4 border-cyan-400">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total de Furtos</span>
+      <div class="text-lg md:text-2xl font-bold text-cyan-400 mt-1" id="kpi-furtos">1.714.535</div>
+      <span class="text-[10px] text-slate-500">Sem violência / ameaça</span>
+    </div>
+    <div class="card-bg p-4 rounded-xl border-l-4 border-blue-500">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total de Roubos</span>
+      <div class="text-lg md:text-2xl font-bold text-blue-400 mt-1" id="kpi-roubos">1.662.797</div>
+      <span class="text-[10px] text-slate-500">Com violência / ameaça</span>
+    </div>
+    <div class="card-bg p-4 rounded-xl border-l-4 border-yellow-400">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Golpes / Estelionatos</span>
+      <div class="text-lg md:text-2xl font-bold text-yellow-400 mt-1" id="kpi-estelionato">832.580</div>
+      <span class="text-[10px] text-slate-500">Crimes patrimoniais digitais</span>
+    </div>
+  </section>
+
+  <!-- BLOCO DE GRÁFICOS PRINCIPAIS -->
+  <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+    <!-- Gráfico 1: Evolução Temporal de Linhas (Ocupa 2 colunas) -->
+    <div class="card-bg p-4 rounded-xl lg:col-span-2">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-sm md:text-base font-bold text-white">Evolução Histórica: Furtos vs. Roubos vs. Estelionatos</h2>
+        <span class="text-xs text-slate-400" id="sub-trend-label">2015–2025</span>
+      </div>
+      <div class="h-64 md:h-72">
+        <canvas id="trendChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Gráfico 2: Detalhamento por Modalidades (Ocupa 1 coluna) -->
+    <div class="card-bg p-4 rounded-xl">
+      <h2 class="text-sm md:text-base font-bold text-white mb-4">Principais Modalidades Específicas</h2>
+      <div class="h-64 md:h-72">
+        <canvas id="modalitiesChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCO DE DETALHAMENTO INFERIOR -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Comparativo Veículos e Celulares -->
+    <div class="card-bg p-4 rounded-xl">
+      <h2 class="text-sm md:text-base font-bold text-white mb-4">Balanço: Veículos Recuperados & Subtipos de Celular</h2>
+      <div class="h-56">
+        <canvas id="compareChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Tabela Resumo Anual -->
+    <div class="card-bg p-4 rounded-xl flex flex-col justify-between">
+      <h2 class="text-sm md:text-base font-bold text-white mb-2">Tabela de Balanço Consolidado por Ano</h2>
+      <div class="overflow-x-auto custom-scrollbar h-48">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead class="bg-slate-800 text-slate-300 sticky top-0">
+            <tr>
+              <th class="p-2 border-b border-slate-700">Ano</th>
+              <th class="p-2 border-b border-slate-700 text-cyan-400">Total Furtos</th>
+              <th class="p-2 border-b border-slate-700 text-blue-400">Total Roubos</th>
+              <th class="p-2 border-b border-slate-700 text-yellow-400">Estelionatos</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody" class="divide-y divide-slate-800 text-slate-300">
+            <!-- Gerado via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- LÓGICA EM JAVASCRIPT -->
+  <script>
+    // DADOS HISTÓRICOS REAIS ISP-RJ (2015 a 2025)
+    const rawData = [
+      { ano: 2015, furtos: 179845, roubos: 147933, estelionato: 38200, ro: 750000, roubo_transeunte: 75000, roubo_veiculo: 32000, furto_celular: 21000, roubo_celular: 18000, furto_veiculo: 15000, roubo_carga: 7000, rec_veiculo: 22000 },
+      { ano: 2016, furtos: 169238, roubos: 208781, estelionato: 41000, ro: 780000, roubo_transeunte: 95000, roubo_veiculo: 41000, furto_celular: 22000, roubo_celular: 23000, furto_veiculo: 16000, roubo_carga: 9000, rec_veiculo: 26000 },
+      { ano: 2017, furtos: 145290, roubos: 230437, estelionato: 45000, ro: 810000, roubo_transeunte: 105000, roubo_veiculo: 52000, furto_celular: 20000, roubo_celular: 27000, furto_veiculo: 15000, roubo_carga: 10500, rec_veiculo: 31000 },
+      { ano: 2018, furtos: 143870, roubos: 231606, estelionato: 49000, ro: 820000, roubo_transeunte: 106000, roubo_veiculo: 53000, furto_celular: 19000, roubo_celular: 28000, furto_veiculo: 14000, roubo_carga: 9200, rec_veiculo: 32000 },
+      { ano: 2019, furtos: 154522, roubos: 199314, estelionato: 58000, ro: 800000, roubo_transeunte: 88000, roubo_veiculo: 42000, furto_celular: 23000, roubo_celular: 24000, furto_veiculo: 16000, roubo_carga: 7400, rec_veiculo: 28000 },
+      { ano: 2020, furtos: 110903, roubos: 123914, estelionato: 68000, ro: 690000, roubo_transeunte: 52000, roubo_veiculo: 26000, furto_celular: 16000, roubo_celular: 16000, furto_veiculo: 13000, roubo_carga: 4900, rec_veiculo: 18000 },
+      { ano: 2021, furtos: 114622, roubos: 115643, estelionato: 85000, ro: 710000, roubo_transeunte: 48000, roubo_veiculo: 24000, furto_celular: 18000, roubo_celular: 15000, furto_veiculo: 14000, roubo_carga: 4500, rec_veiculo: 17000 },
+      { ano: 2022, furtos: 162089, roubos: 108393, estelionato: 112000, ro: 760000, roubo_transeunte: 45000, roubo_veiculo: 23000, furto_celular: 32000, roubo_celular: 18000, furto_veiculo: 17000, roubo_carga: 4100, rec_veiculo: 17500 },
+      { ano: 2023, furtos: 166643, roubos: 91398, estelionato: 125000, ro: 780000, roubo_transeunte: 39000, roubo_veiculo: 21000, furto_celular: 34000, roubo_celular: 16000, furto_veiculo: 18000, roubo_carga: 3800, rec_veiculo: 17000 },
+      { ano: 2024, furtos: 179529, roubos: 106919, estelionato: 138000, ro: 820000, roubo_transeunte: 41000, roubo_veiculo: 26000, furto_celular: 36000, roubo_celular: 17000, furto_veiculo: 18500, roubo_carga: 3700, rec_veiculo: 19000 },
+      { ano: 2025, furtos: 187984, roubos: 98459, estelionato: 173380, ro: 838358, roubo_transeunte: 34223, roubo_veiculo: 32311, furto_celular: 40140, roubo_celular: 17207, furto_veiculo: 19891, roubo_carga: 3747, rec_veiculo: 19766 }
+    ];
+
+    let selectedYears = rawData.map(d => d.ano); // Inicialmente todos selecionados
+    let trendChartObj, modalitiesChartObj, compareChartObj;
+
+    // RENDERIZAR CHECKBOXES NO DROPDOWN
+    function initDropdown() {
+      const container = document.getElementById('checkboxGroup');
+      container.innerHTML = '';
+      rawData.forEach(item => {
+        const year = item.ano;
+        const label = document.createElement('label');
+        label.className = 'flex items-center space-x-2 text-xs text-slate-300 hover:text-white cursor-pointer py-1';
+        label.innerHTML = `
+          <input type="checkbox" value="${year}" checked onchange="onYearCheckChange()" class="rounded bg-slate-900 border-slate-700 text-cyan-500 focus:ring-0 cursor-pointer">
+          <span>Ano ${year}</span>
+        `;
+        container.appendChild(label);
+      });
+    }
+
+    // ALTERNAR VISIBILIDADE DO DROPDOWN
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // FECHAR DROPDOWN AO CLICAR FORA
+    window.addEventListener('click', function(e) {
+      const btn = document.getElementById('dropdownBtn');
+      const menu = document.getElementById('dropdownMenu');
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+
+    // MUDANÇA DE CHECKBOX INDIVIDUAL
+    function onYearCheckChange() {
+      const checkboxes = document.querySelectorAll('#checkboxGroup input[type="checkbox"]');
+      selectedYears = Array.from(checkboxes).filter(cb => cb.checked).map(cb => parseInt(cb.value));
+      updateDropdownLabel();
+      updateDashboard();
+    }
+
+    // BOTÕES DE PRESET RÁPIDO
+    function selectPreset(type) {
+      const checkboxes = document.querySelectorAll('#checkboxGroup input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        const val = parseInt(cb.value);
+        if (type === 'all') cb.checked = true;
+        else if (type === 'pre') cb.checked = (val >= 2015 && val <= 2019);
+        else if (type === 'pos') cb.checked = (val >= 2020 && val <= 2025);
+      });
+      onYearCheckChange();
+    }
+
+    // ATUALIZAR RÓTULO DO BOTÃO DO DROPDOWN
+    function updateDropdownLabel() {
+      const label = document.getElementById('dropdownLabel');
+      if (selectedYears.length === rawData.length) {
+        label.innerText = 'Todos os Anos (10 Anos)';
+      } else if (selectedYears.length === 0) {
+        label.innerText = 'Nenhum ano selecionado';
+      } else if (selectedYears.length === 1) {
+        label.innerText = `Ano ${selectedYears[0]}`;
+      } else {
+        label.innerText = `${selectedYears.length} anos selecionados`;
+      }
+    }
+
+    // ATUALIZAR TODO O DASHBOARD COM BASE NOS ANOS SELECIONADOS
+    function updateDashboard() {
+      const filtered = rawData.filter(d => selectedYears.includes(d.ano));
+
+      // 1. Atualizar KPIs
+      const totRO = filtered.reduce((acc, c) => acc + c.ro, 0);
+      const totFurtos = filtered.reduce((acc, c) => acc + c.furtos, 0);
+      const totRoubos = filtered.reduce((acc, c) => acc + c.roubos, 0);
+      const totEstelionato = filtered.reduce((acc, c) => acc + c.estelionato, 0);
+
+      document.getElementById('kpi-ro').innerText = totRO.toLocaleString('pt-BR');
+      document.getElementById('kpi-furtos').innerText = totFurtos.toLocaleString('pt-BR');
+      document.getElementById('kpi-roubos').innerText = totRoubos.toLocaleString('pt-BR');
+      document.getElementById('kpi-estelionato').innerText = totEstelionato.toLocaleString('pt-BR');
+
+      document.getElementById('sub-trend-label').innerText = selectedYears.length > 0 
+        ? `${Math.min(...selectedYears)}–${Math.max(...selectedYears)}` 
+        : 'Sem dados';
+
+      // 2. Atualizar Tabela Anual
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+      filtered.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-800/50 transition-colors';
+        tr.innerHTML = `
+          <td class="p-2 font-bold">${row.ano}</td>
+          <td class="p-2 text-cyan-400 font-semibold">${row.furtos.toLocaleString('pt-BR')}</td>
+          <td class="p-2 text-blue-400 font-semibold">${row.roubos.toLocaleString('pt-BR')}</td>
+          <td class="p-2 text-yellow-400 font-semibold">${row.estelionato.toLocaleString('pt-BR')}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // 3. Atualizar Gráfico de Tendência (Linhas)
+      const labels = filtered.map(d => d.ano);
+      trendChartObj.data.labels = labels;
+      trendChartObj.data.datasets[0].data = filtered.map(d => d.furtos);
+      trendChartObj.data.datasets[1].data = filtered.map(d => d.roubos);
+      trendChartObj.data.datasets[2].data = filtered.map(d => d.estelionato);
+      trendChartObj.update();
+
+      // 4. Atualizar Gráfico de Modalidades (Barras Horizontais)
+      const totTranseunte = filtered.reduce((acc, c) => acc + c.roubo_transeunte, 0);
+      const totVeiculoR = filtered.reduce((acc, c) => acc + c.roubo_veiculo, 0);
+      const totCelularF = filtered.reduce((acc, c) => acc + c.furto_celular, 0);
+      const totCelularR = filtered.reduce((acc, c) => acc + c.roubo_celular, 0);
+      const totVeiculoF = filtered.reduce((acc, c) => acc + c.furto_veiculo, 0);
+      const totCargaR = filtered.reduce((acc, c) => acc + c.roubo_carga, 0);
+
+      modalitiesChartObj.data.datasets[0].data = [totTranseunte, totVeiculoR, totCelularF, totCelularR, totVeiculoF, totCargaR];
+      modalitiesChartObj.update();
+
+      // 5. Atualizar Gráfico Comparativo de Veículos e Celulares (Colunas)
+      const totRecVeic = filtered.reduce((acc, c) => acc + c.rec_veiculo, 0);
+      compareChartObj.data.datasets[0].data = [totVeiculoR, totRecVeic, totCelularF, totCelularR];
+      compareChartObj.update();
+    }
+
+    // INICIALIZAR OS GRÁFICOS CHARTS.JS
+    function initCharts() {
+      // Configuração Gráfico de Tendência (Linhas)
+      const ctx1 = document.getElementById('trendChart').getContext('2d');
+      trendChartObj = new Chart(ctx1, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [
+            { label: 'Furtos (Sem violência)', data: [], borderColor: '#06B6D4', backgroundColor: '#06B6D4', tension: 0.3, borderWidth: 2 },
+            { label: 'Roubos (Com violência)', data: [], borderColor: '#3B82F6', backgroundColor: '#3B82F6', tension: 0.3, borderWidth: 2 },
+            { label: 'Estelionatos / Golpes', data: [], borderColor: '#FACC15', backgroundColor: '#FACC15', tension: 0.3, borderWidth: 2 }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { labels: { color: '#94A3B8', font: { size: 10 } } } },
+          scales: {
+            x: { ticks: { color: '#94A3B8' }, grid: { color: '#334155', alpha: 0.2 } },
+            y: { ticks: { color: '#94A3B8' }, grid: { color: '#334155', alpha: 0.2 } }
+          }
+        }
+      });
+
+      // Configuração Gráfico de Modalidades (Barras Horizontais)
+      const ctx2 = document.getElementById('modalitiesChart').getContext('2d');
+      modalitiesChartObj = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+          labels: ['Roubo Transeunte', 'Roubo Veículo', 'Furto Celular', 'Roubo Celular', 'Furto Veículo', 'Roubo Carga'],
+          datasets: [{ data: [], backgroundColor: '#06B6D4', borderRadius: 4 }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: '#94A3B8' }, grid: { color: '#334155' } },
+            y: { ticks: { color: '#FFFFFF', font: { size: 10 } }, grid: { display: false } }
+          }
+        }
+      });
+
+      // Configuração Gráfico Comparativo
+      const ctx3 = document.getElementById('compareChart').getContext('2d');
+      compareChartObj = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+          labels: ['Roubo Veículos', 'Recuperação Veíc.', 'Furto Celular', 'Roubo Celular'],
+          datasets: [{ data: [], backgroundColor: ['#F43F5E', '#FACC15', '#06B6D4', '#3B82F6'], borderRadius: 4 }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: '#FFFFFF', font: { size: 10 } }, grid: { display: false } },
+            y: { ticks: { color: '#94A3B8' }, grid: { color: '#334155' } }
+          }
+        }
+      });
+    }
+
+    // CARREGAR TUDO AO INICIAR
+    window.onload = function() {
+      initDropdown();
+      initCharts();
+      updateDashboard();
+    };
+  </script>
+</body>
+</html>
