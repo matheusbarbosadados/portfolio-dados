@@ -17,7 +17,8 @@ Projeto de Análise de Dados e visualização executiva dos registros de furtos,
 
 ## Visual do Painel (Interativo) - HTML/CSS/JS
 
-![Painel da Criminalidade no Rio de Janeiro](./index.html)
+- **Versão interativa no navegador (via GitHub Pages):** [Abrir Painel Interativo](https://matheusbarbosadados.github.io/portfolio-dados/1_mega_projetos/criminalidade_patrimonial/index.html)
+- **Arquivo local no repositório:** [./index.html]
 
 ---
 
@@ -56,3 +57,5 @@ Este projeto utilizou o **Gemini** na abordagem 4ª Forma (No-Code / Processamen
 **Extração e Consolidação via Python:** O script analise_isp.py foi usado para ler a base agregada do ISP-RJ, filtrar o recorte de 2015 a 2025 e gerar o resumo estatístico (resumo_isp_10anos.txt) sem travamentos.
 
 **Geração Visual com o Gemini:** Os números consolidados foram processados com apoio do Gemini para estruturar e renderizar a imagem executiva final (Dashboard.png) em estilo escuro (Dark Tech), reunindo KPIs, evolução temporal e detalhamento por modalidade.
+
+**Painel Interativo em HTML/CSS/JS:** Com os dados consolidados em mãos, o Gemini também apoiou a montagem do index.html com gráficos interativos e filtro multisseleção por ano.
