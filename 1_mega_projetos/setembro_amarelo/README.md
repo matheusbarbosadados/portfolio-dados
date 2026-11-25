@@ -54,7 +54,8 @@ O fluxo de trabalho reuniu boas práticas de engenharia de dados com o suporte a
 ---
 
 [![Preview do Dashboard Interativo](./dashboard.png)](https://matheusbarbosadados.github.io/portfolio-dados/1_mega_projetos/setembro_amarelo/index.html)
-> 💡 *Clique na imagem acima para abrir a versão interativa do dashboard com filtros e gráficos dinâmicos.*
+- **Versão interativa no navegador (via GitHub Pages):** [Abrir Painel Interativo](https://matheusbarbosadados.github.io/portfolio-dados/1_mega_projetos/setembro_amarelo/index.html)
+> 💡 *Clique no link acima para abrir a versão interativa do dashboard com filtros e gráficos dinâmicos.*
 
 ---
 
