@@ -1,0 +1,76 @@
+Arquivo analisado: BaseMunicipioMensal.csv
+Município: Rio de Janeiro
+Período: 2015 a 2025
+Total de meses analisados: 12144
+
+--- EVOLUÇÃO ANUAL DE ROUBOS E FURTOS (2015-2025) ---
+Ano 2015 -> Total Furtos: 179.845 | Total Roubos: 147.933
+Ano 2016 -> Total Furtos: 169.238 | Total Roubos: 208.781
+Ano 2017 -> Total Furtos: 145.290 | Total Roubos: 230.437
+Ano 2018 -> Total Furtos: 143.870 | Total Roubos: 231.606
+Ano 2019 -> Total Furtos: 154.522 | Total Roubos: 199.314
+Ano 2020 -> Total Furtos: 110.903 | Total Roubos: 123.914
+Ano 2021 -> Total Furtos: 114.622 | Total Roubos: 115.643
+Ano 2022 -> Total Furtos: 162.089 | Total Roubos: 108.393
+Ano 2023 -> Total Furtos: 166.643 | Total Roubos: 91.398
+Ano 2024 -> Total Furtos: 179.529 | Total Roubos: 106.919
+Ano 2025 -> Total Furtos: 187.984 | Total Roubos: 98.459
+
+--- TOTAIS ACUMULADOS NO PERÍODO (2015-2025) ---
+fmun_cod: 40.113.192.108
+hom_doloso: 42.443
+lesao_corp_morte: 510
+latrocinio: 1.402
+cvli: 44.355
+hom_por_interv_policial: 12.350
+feminicidio: 135
+letalidade_violenta: 56.840
+tentat_hom: 52.284
+tentativa_feminicidio: 401
+lesao_corp_dolosa: 687.931
+estupro: 58.001
+hom_culposo: 21.906
+lesao_corp_culposa: 291.418
+roubo_transeunte: 628.223
+roubo_celular: 219.207
+roubo_em_coletivo: 109.185
+roubo_rua: 956.615
+roubo_veiculo: 372.311
+roubo_carga: 67.847
+roubo_comercio: 46.457
+roubo_residencia: 11.034
+roubo_banco: 147
+roubo_cx_eletronico: 572
+roubo_conducao_saque: 728
+roubo_apos_saque: 7.732
+roubo_bicicleta: 2.273
+outros_roubos: 205.375
+total_roubos: 1.662.797
+furto_veiculos: 176.391
+furto_transeunte: 207.824
+furto_coletivo: 85.921
+furto_celular: 259.140
+furto_bicicleta: 28.299
+outros_furtos: 949.228
+total_furtos: 1.714.535
+sequestro: 51
+extorsao: 23.482
+sequestro_relampago: 1.345
+estelionato: 832.580
+apreensao_drogas: 254.187
+posse_drogas: 105.418
+trafico_drogas: 126.595
+apreensao_drogas_sem_autor: 26.549
+recuperacao_veiculos: 247.266
+apf: 388.834
+aaapai: 66.237
+cmp: 157.929
+cmba: 15.211
+ameaca: 662.669
+pessoas_desaparecidas: 57.272
+encontro_cadaver: 4.295
+encontro_ossada: 378
+pol_militares_mortos_serv: 223
+pol_civis_mortos_serv: 28
+registro_ocorrencias: 8.568.358
+fase: 36.432
