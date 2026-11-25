@@ -10,9 +10,14 @@ Projeto de Análise de Dados e visualização executiva dos registros de furtos,
 
 ---
 
-## 📸 Visual do Painel
+## 📸 Visual do Painel - Simples (Gemini)
 
 ![Painel da Criminalidade no Rio de Janeiro](./Dashboard.png)
+
+
+## Visual do Painel (Interativo) - HTML/CSS/JS
+
+![Painel da Criminalidade no Rio de Janeiro](./index.html)
 
 ---
 
