@@ -31,13 +31,21 @@ O relatório está dividido em **4 páginas**, com modelagem relacional estrutur
 ## 🖼️ Prévia das Páginas
 
 ### Página 1 — Dashboard de Vendas
+---
+
 ![Dashboard 1](./Dashboard%201.png)
 
 ### Página 2 — Resumo de Vendas e Rentabilidade
+---
+
 ![Dashboard 2](./Dashboard%202.png)
+
+---
 
 ### Página 3 — Desempenho Comercial e Categorias
 ![Dashboard 3](./Dashboard%203.png)
+
+---
 
 ### Página 4 — Análise por Produto e Evolução Anual
 ![Dashboard 4](./Dashboard%204.png)
